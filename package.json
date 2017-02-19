@@ -3,10 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-plugin-transform-node-env-inline": "0.0.2",
+    "cross-env": "^3.1.4",
+    "enzyme": "^2.7.1",
     "glob": "^7.1.1",
+    "jest-cli": "^18.1.0",
     "less": "^2.7.2",
+    "mkdirp": "^0.5.1",
     "npm-run-all": "^4.0.1",
+    "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.9.0",
+    "redux-immutable-state-invariant": "^1.2.4",
     "watch": "^1.0.2"
   },
   "dependencies": {
@@ -17,16 +25,22 @@
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
     "redux": "^3.6.0",
-    "redux-immutable-state-invariant": "^1.2.4",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "build-css": "node scripts/buildCss.js",
+    "build-css": "node scripts/buildCss.js src",
     "watch-css": "npm run build-css && node scripts/watchLess.js",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
+    "eject": "react-scripts eject",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "compile-js:debug": "cross-env NODE_ENV=test ./node_modules/babel-cli/bin/babel.js src --out-dir .compiled --no-babelrc --source-maps map --presets=react-app,jest --plugins=transform-node-env-inline",
+    "compile-css:debug": "node scripts/buildCss.js src",
+    "copy-static:debug": "node scripts/copyStaticFiles.js src .compiled",
+    "precompile:debug": "npm run compile-css:debug",
+    "compile:debug": "npm-run-all copy-static:debug compile-js:debug",
+    "pretest:debug": "npm run compile:debug",
+    "test:debug": "node --debug-brk --no-lazy ./node_modules/jest-cli/bin/jest.js --config=./config/jest/jestDebugConfig.json"
   }
 }
