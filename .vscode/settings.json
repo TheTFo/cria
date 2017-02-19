@@ -3,6 +3,8 @@
     // The following will hide the js and map files in the editor
     "files.exclude": {
         "src/**/*.css": true,
-        "src/**/*.map": true
+        "src/**/*.map": true,
+        "src/**/*.svg.js": true,
+        ".compiled/**/*": true
     }
 }
