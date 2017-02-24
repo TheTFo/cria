@@ -10,6 +10,7 @@ class App extends Component {
   }
 
   onLanguageChange(e) {
+    console.log('languageChange');
     this.context.i18n.changeLanguage(e.target.value);
   }
 
@@ -20,8 +21,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>{this.props.t('welcome')}</h2>
           <select onChange={this.onLanguageChange}>
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
+            <option value="en-US">English (US)</option>
+            <option value="en-GB">English (Great Britain)</option>
+            <option value="es-MX">Spanish (Mexico)</option>
           </select>
         </div>
         <div className="App-content">
