@@ -5,7 +5,9 @@ i18n
   .use(Backend)
   .init({
     lng: 'en-US',
-    whitelist: ['en-US'],
+    whitelist: ['en-US', 'en-GB', 'es-MX'],
+    ns: ['app'],
+    defaultNS: ['app'],
     fallbackLng: false,
     load: 'currentOnly',
     backend: {

@@ -10,7 +10,6 @@ class App extends Component {
   }
 
   onLanguageChange(e) {
-    console.log('languageChange');
     this.context.i18n.changeLanguage(e.target.value);
   }
 
