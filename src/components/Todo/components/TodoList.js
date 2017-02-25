@@ -6,7 +6,7 @@ export class TodoList extends React.Component {
     render() {
         return (
             <div className="todo-list">
-                <button onClick={this.props.onClickClear}>{this.props.t('clear_all')}</button>
+                <button onClick={this.props.onClickClear}>{this.props.t('todo:clear_all')}</button>
                 <ul>
                     {
                         this.props.todos.map((todo, i) =>

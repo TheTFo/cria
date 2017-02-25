@@ -5,7 +5,7 @@ export const TodoForm = ({ todoText, onTextChange, onClickAdd, t }) => {
     return (
         <div className="todo-form">
             <input type="text" value={todoText} onChange={onTextChange} />
-            <button onClick={onClickAdd}>{t('add_todo')}</button>
+            <button onClick={onClickAdd}>{t('todo:add_todo')}</button>
         </div>
     );
 };

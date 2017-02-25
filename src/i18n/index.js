@@ -4,13 +4,15 @@ import Backend from 'i18next-xhr-backend';
 i18n
   .use(Backend)
   .init({
-    fallbackLng: false,
     lng: 'en-US',
+    whitelist: ['en-US'],
+    fallbackLng: false,
+    load: 'currentOnly',
     backend: {
-      loadPath: 'i18n/lang/{{lng}}.json',
+      loadPath: 'i18n/lang/{{lng}}/{{ns}}.json',
       allowMultiLoading: false,
       crossDomain: false,
-      withCredentials: false,
+      withCredentials: false
     }
   });
 

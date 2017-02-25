@@ -48,5 +48,11 @@
     "compile:debug": "npm-run-all copy-static:debug compile-js:debug",
     "pretest:debug": "npm run compile:debug",
     "test:debug": "node --debug-brk --no-lazy ./node_modules/jest-cli/bin/jest.js --config=./config/jest/jestDebugConfig.json"
+  },
+  "i18n": {
+    "lngs": ["en-US", "en-GB", "es-MX"],
+    "removeUnusedKeys": true,
+    "defaultValue": "_NOT_TRANSLATED_",
+    "ns": ["app", "todo"]
   }
 }

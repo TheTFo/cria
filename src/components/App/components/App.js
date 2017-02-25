@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>{this.props.t('welcome')}</h2>
+          <h2>{this.props.t('app:welcome')}</h2>
           <select onChange={this.onLanguageChange}>
             <option value="en-US">English (US)</option>
             <option value="en-GB">English (Great Britain)</option>

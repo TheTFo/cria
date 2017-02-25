@@ -37,7 +37,7 @@ export class TodoPage extends React.Component {
     render() {
         return (
             <div className="todo-page">
-                <h2>{this.props.t('todo_list')}</h2>
+                <h2>{this.props.t('todo:todo_list')}</h2>
                 <TodoForm
                     t={this.props.t}
                     todoText={this.state.todoText}

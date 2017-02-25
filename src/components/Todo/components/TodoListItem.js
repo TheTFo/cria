@@ -5,7 +5,7 @@ import './TodoListItem.css';
 export const TodoListItem = ({index, text, onDone, t}) => {
     return (
         <li className={'todo-list-item'}>
-            <a className="done" onClick={onDone}><Icon title={t('done')} icon="check" /></a>
+            <a className="done" onClick={onDone}><Icon title={t('todo:done')} icon="check" /></a>
             <span>{`${index}) ${text}`}</span>
         </li>
     );

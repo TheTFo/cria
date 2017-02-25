@@ -12,6 +12,6 @@ function mapStateToProps(state) {
 const mapDispatchToProps = { ...actions };
 
 const connectHOC = connect(mapStateToProps, mapDispatchToProps);
-const translateHOC = translate(['todo']);
+const translateHOC = translate('todo');
 
 export default translateHOC(connectHOC(TodoPage)); 
