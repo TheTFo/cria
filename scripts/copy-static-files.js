@@ -4,7 +4,7 @@ var mkdirp = require('mkdirp');
 var path = require('path');
 
 if (process.argv.length < 4) {
-    console.log('Usage: node copyStaticFiles.js src dest');
+    console.log('Usage: node copy-static-files.js src dest');
     return;
 }
 

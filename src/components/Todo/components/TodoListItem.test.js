@@ -7,12 +7,8 @@ describe('TodoListItem', () => {
         let t = jest.fn((key) => key === 'done' ? 'Done' : '');
         let wrapper = shallow(<TodoListItem index={1} text={'some text'} onDone={() => {}} t={t} />);
 
-        let doneLink = wrapper.find('li').children('a.done');
-        expect(doneLink.text()).toBe('Done');
-        
-        console.log(wrapper.find('li').children('a.done + span'));
-        let textSpan = wrapper.find('li').children('a.done + span');
-        expect(textSpan.text()).toBe('Done');
+        let doneLink = wrapper.find('a.done').children('Icon[icon="check"]');
+        expect(doneLink.length).toBe(1);
     });
 
 });
