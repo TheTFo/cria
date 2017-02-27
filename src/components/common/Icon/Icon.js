@@ -1,7 +1,7 @@
 import React from 'react';
 import './Icon.css';
 
-export const Icon = ({icon, ...props}) => {
+export default function Icon({icon, ...props}) {
     const svg = require(`./assets/${icon}.svg.js`);
     const className = 'icon' + (props.className ? ` ${props.className}` : '');
     return (
@@ -12,5 +12,3 @@ export const Icon = ({icon, ...props}) => {
 Icon.propTypes = {
   icon: React.PropTypes.string.isRequired,
 }
-
-export default Icon;

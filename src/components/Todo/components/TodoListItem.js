@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../../common/Icon';
 import './TodoListItem.css';
 
-export const TodoListItem = ({index, text, onDone, t}) => {
+export default function TodoListItem({index, text, onDone, t}) {
     return (
         <li className={'todo-list-item'}>
             <a className="done" onClick={onDone}><Icon title={t('todo:done')} icon="check" /></a>
@@ -17,5 +17,3 @@ TodoListItem.propTypes = {
     onDone: React.PropTypes.func.isRequired,
     t: React.PropTypes.func.isRequired
 };
-
-export default TodoListItem;
