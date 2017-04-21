@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import './TodoPage.css';
@@ -54,10 +55,10 @@ export class TodoPage extends React.Component {
 }
 
 TodoPage.propTypes = {
-    todos: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    addTodo: React.PropTypes.func.isRequired,
-    removeTodo: React.PropTypes.func.isRequired,
-    clearAll: React.PropTypes.func.isRequired,
+    todos: PropTypes.arrayOf(PropTypes.string).isRequired,
+    addTodo: PropTypes.func.isRequired,
+    removeTodo: PropTypes.func.isRequired,
+    clearAll: PropTypes.func.isRequired,
 };
 
 export default TodoPage;

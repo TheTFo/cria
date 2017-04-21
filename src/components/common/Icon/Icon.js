@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Icon.css';
 
 export default function Icon({icon, ...props}) {
@@ -10,5 +11,5 @@ export default function Icon({icon, ...props}) {
 };
 
 Icon.propTypes = {
-  icon: React.PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../../common/Icon';
 import './TodoListItem.css';
 
@@ -12,8 +13,8 @@ export default function TodoListItem({index, text, onDone, t}) {
 };
 
 TodoListItem.propTypes = {
-    index: React.PropTypes.number.isRequired,
-    text: React.PropTypes.string.isRequired,
-    onDone: React.PropTypes.func.isRequired,
-    t: React.PropTypes.func.isRequired
+    index: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    onDone: PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TodoForm.css';
 
 export const TodoForm = ({ todoText, onTextChange, onClickAdd, t }) => {
@@ -11,9 +12,9 @@ export const TodoForm = ({ todoText, onTextChange, onClickAdd, t }) => {
 };
 
 TodoForm.propTypes = {
-    todoText: React.PropTypes.string.isRequired,
-    onTextChange: React.PropTypes.func.isRequired,
-    onClickAdd: React.PropTypes.func.isRequired
+    todoText: PropTypes.string.isRequired,
+    onTextChange: PropTypes.func.isRequired,
+    onClickAdd: PropTypes.func.isRequired
 };
 
 export default TodoForm;

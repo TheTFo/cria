@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 
@@ -34,7 +35,7 @@ class App extends Component {
 }
 
 App.contextTypes = {
-  i18n: React.PropTypes.object
+  i18n: PropTypes.object
 };
 
 export default App;

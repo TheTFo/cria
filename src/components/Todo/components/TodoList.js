@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 import './TodoList.css';
 
@@ -25,9 +26,9 @@ export class TodoList extends React.Component {
 }
 
 TodoList.propTypes = {
-    todos: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    onClickDone: React.PropTypes.func.isRequired,
-    onClickClear: React.PropTypes.func.isRequired
+    todos: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onClickDone: PropTypes.func.isRequired,
+    onClickClear: PropTypes.func.isRequired
 };
 
 export default TodoList;
