@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/badges/github.com/TheTFo/cria.svg)](https://gemnasium.com/github.com/TheTFo/cria)
+
 Cria - A seed bootstrapped bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Todo: Document LESS CSS preprocessor
