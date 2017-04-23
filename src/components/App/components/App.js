@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from './logo.svg';
+import TodoRoute from '../../Todo';
 import './App.css';
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
           </select>
         </div>
         <div className="App-content">
-          {this.props.children}
+          <TodoRoute />
         </div>
       </div>
     );

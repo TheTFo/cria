@@ -1,12 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import AppContainer from './components/App';
-import TodoContainer from './components/Todo';
 
 export const Routes = (
-    <Route path="/" component={AppContainer}>
-        <Route path="todo" component={TodoContainer} />
-    </Route>
+    <Route path="/" component={AppContainer} />
 );
 
 export default Routes;
