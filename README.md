@@ -2,7 +2,15 @@
 
 Cria - A seed bootstrapped bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Todo: Document LESS CSS preprocessor
+## Changes from Create-React-App
+
+This seed prefers LESS over standard CSS. In order to use LESS for your styles, simply add your LESS file, and import the corresponding file as a CSS file.  For example, "./MyStyles.less" would be imported as "./MyStyles.css".  
+
+If you're using VSCode, we've included settings to hide CSS files.  If you'd prefer to use CSS and not LESS, you can remove the settings, and just add CSS.  You can also remove references to build-css from package.json's script section.
+
+## The following is the Create-React-App Readme from the type of bootstrap.
+
+For the most updated Reademe, checkout the Create-React-App repo.
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
