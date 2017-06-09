@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import TodoRoute from '../../Todo';
+import SampleRoute from '../../Sample';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
         </div>
         <div className="App-content">
           <TodoRoute />
+          <SampleRoute />
         </div>
       </div>
     );
